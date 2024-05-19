@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -116,8 +116,9 @@ namespace Verwaltungssoftware
             string nachname = Console.ReadLine();
             Console.Write("Adresse: ");
             string adresse = Console.ReadLine();
-            Console.Write("Mitarbeiterrabatt (z.B., 0.10 für 10%): ");
-            double mitarbeiterrabatt = double.Parse(Console.ReadLine());
+            Console.Write("Mitarbeiterrabatt (z.B., 10 für 10%): ");
+            double mitarbeiterrabattProzent = double.Parse(Console.ReadLine());
+            double mitarbeiterrabatt = mitarbeiterrabattProzent / 100;
 
             int mitarbeiternummer = Nutzer.NutzerListe.OfType<Mitarbeiter>().Count() + 1;
 
